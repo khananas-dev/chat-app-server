@@ -152,6 +152,10 @@ io.on("connection", (socket) => {
 });
 
 // Listing to the server
-server.listen("8000", () => {
-  console.log(`Server Running on http://localhost:8000/`);
+server.listen(process.env.PORT || 8000, function () {
+  console.log(
+    "Express server listening on port %d in %s mode",
+    this.address().port,
+    server.settings.env
+  );
 });
