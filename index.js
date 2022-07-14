@@ -153,9 +153,5 @@ io.on("connection", (socket) => {
 
 // Listing to the server
 server.listen(process.env.PORT || 8000, function () {
-  console.log(
-    "Express server listening on port %d in %s mode",
-    this.address().port,
-    server.settings.env
-  );
+  console.log("Express server listening on port %d ", this.address().port);
 });
